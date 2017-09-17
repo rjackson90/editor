@@ -2,7 +2,7 @@ FROM node:stretch
 
 WORKDIR /app
 RUN apt-get update \
-	&& apt-get install --yes nodejs-legacy vim
+	&& apt-get install --yes nodejs-legacy 
 
-CMD ['/bin/bash']
+CMD ["npm", "start"]
 EXPOSE 8080
