@@ -16,10 +16,14 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.6.1",
+    "react-codemirror": "^1.0.0",
     "react-dom": "^15.6.1"
   },
   "babel": {
-    "presets": ["env", "react"]
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
