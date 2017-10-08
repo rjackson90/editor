@@ -1,3 +1,32 @@
 body {
 	background: lightblue;
 }
+
+.horizontal-bag {
+	background: pink;
+	border: 2px solid red;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.vertical-bag {
+	background: orange;
+	border: 2px solid darkorange;
+	
+	display: flex;
+	flex-flow: column nowrap;
+	
+	flex: 1 1 auto;
+	min-width: 350px;
+}
+
+.item {
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid darkgrey;
+	background: lightyellow;
+
+	flex: 1 1 auto;
+}

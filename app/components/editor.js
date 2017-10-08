@@ -24,7 +24,7 @@ export default class Editor extends React.Component {
 
 	render() {
 		return(
-			<div className="editor">
+			<div className={this.props.className}>
 				<div className="title">{this.props.title}</div>
 				<CodeMirror
 					value={this.state.text}

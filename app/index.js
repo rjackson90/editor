@@ -11,17 +11,21 @@ class App extends React.Component {
 		return(
 			<div className="horizontal-bag">
 				<div className="vertical-bag">
-					<Editor 
+					<Editor
+						className="item"
 						title="Code" 
 						default="// Code goes here..."
 					/>
-					<Editor 
+					<Editor
+						className="item"
 						title="Content" 
 						default="Write your content here"
 					/>
 				</div>
 				<div className="vertical-bag">
-					<p>Placeholder</p>
+					<div className="item">
+						<p>Placeholder</p>
+					</div>
 				</div>
 			</div>
 		)
