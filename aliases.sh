@@ -30,7 +30,7 @@ container() {
 	
 	# If the built path is an executable file, execute it!
 	if [ -f "${TARGET}" -a -x "${TARGET}" ]; then
-		exec $TARGET
+		eval "${TARGET}"
 		return
 	else
 		echo "${TARGET#${PROJECT_DIR}/} is not an executable file"
