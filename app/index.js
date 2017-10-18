@@ -13,12 +13,12 @@ class App extends React.Component {
 				<div className="vertical-bag">
 					<Editor
 						className="item"
-						title="Code" 
+						title="HTML" 
 						default="// Code goes here..."
 					/>
 					<Editor
 						className="item"
-						title="Content" 
+						title="Content (YAML)" 
 						default="Write your content here"
 					/>
 				</div>
