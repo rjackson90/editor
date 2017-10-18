@@ -10,5 +10,5 @@ exec docker run -it --rm \
 	-v /etc/passwd:/etc/passwd:ro \
 	-u $(id -u $USER):$(id -g $USER) \
 	-v $PROJECT_DIR:/app \
-	-p 80:8080 \
+	-p 8002:8080 \
 	"${PROJECT_NAME}-dev"
