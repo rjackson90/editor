@@ -9,7 +9,7 @@ container() {
 	local TARGET="${PROJECT_DIR}/.docker/$*.sh"
 	
 	# Good old help message
-	if [ "$1" == "help" -o "$1" == "--help" -o "$1" == "-h" ]; then
+	if [ "$1" == "help" -o "$1" == "--help" -o "$1" == "-h" -o -z "${1+h}" ]; then
 		echo -e "usage: container <command>"
 		echo -e ""
 		echo -e "\tlist | ls | tree : Show available container scripts"
