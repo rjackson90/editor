@@ -1,11 +1,19 @@
 // JS deps
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider, connect } from "react-redux"
+
 import Editor from './components/editor.js'
+import store from './store'
 
 // CSS deps
 require('./index.css')
 
+@connect((store) => {
+	return {
+		source: store.source
+	}
+})
 class App extends React.Component {
 	render() {
 		return(
@@ -33,6 +41,8 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-	<App/>,
+	<Provider store={store}>
+		<App/>
+	</Provider>,
 	document.getElementById('app')
 );

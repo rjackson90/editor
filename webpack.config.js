@@ -9,11 +9,24 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{ test: /\.(js)$/, use: 'babel-loader' },
+			{ 
+				test: /\.(js)$/, 
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['env'],
+						plugins: [require('babel-plugin-transform-decorators-legacy').default
+							,require('babel-plugin-transform-object-rest-spread')]
+					}
+				}
+			},
 			{ test: /\.css$/, use: ['style-loader', 'css-loader']}
 		]
 	},
 	plugins: [new HtmlWebpackPlugin({
 		template: 'app/index.html'
-	})]
+	})],
+	devServer: {
+		disableHostCheck: true
+	}
 }
